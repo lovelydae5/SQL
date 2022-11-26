@@ -1,3 +1,3 @@
 # Daesha's SQL Portfolio #
 
-### Written example's of SQL that I have created are found here! ###
+### This is where you will find examples of SQL that I have created! ###
