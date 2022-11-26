@@ -1,0 +1,23 @@
+--Create a skincare products database
+CREATE TABLE skincare (id INTEGER PRIMARY KEY, name TEXT, quantity INTEGER, price REAL);
+
+INSERT INTO skincare VALUES(1, "Cream Cleanser", 5, 15.99);
+INSERT INTO skincare VALUES(2, "Gel Cleanser", 7, 15.99);
+INSERT INTO skincare VALUES(3, "Toner", 3, 12.99);
+INSERT INTO skincare VALUES(4, "Polish", 5, 18.99);
+INSERT INTO skincare VALUES(6, "Moisturizer", 8, 14.99);
+INSERT INTO skincare VALUES(7, "Eye Cream", 11, 16.99);
+INSERT INTO skincare VALUES(8, "Retinol", 9, 25.99);
+INSERT INTO skincare VALUES(9, "GF Serum", 8, 35.99);
+INSERT INTO skincare VALUES(10, "Brightenting Serum", 6, 20.99);
+INSERT INTO skincare VALUES(11, "HA Serum", 8, 24.99);
+INSERT INTO skincare VALUES(12, "Pigment Control", 4, 21.99);
+INSERT INTO skincare VALUES(13, "Acne cream", 5, 22.99);
+INSERT INTO skincare VALUES(14, "Tinted SPF36", 15, 25.99);
+INSERT INTO skincare VALUES(15, "Powder SPF36", 5, 25.99);
+
+--Display skincare products in order by price
+SELECT * FROM skincare ORDER BY price;
+
+--Display skincare products that have a quantity of 7 or less available
+SELECT * FROM skincare WHERE quantity < 7 ORDER BY quantity;
