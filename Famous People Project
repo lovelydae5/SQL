@@ -1,0 +1,129 @@
+/* Create table about the people and what they do here */
+
+CREATE TABLE singers 
+    (id INTEGER PRIMARY KEY AUTOINCREMENT,
+    artist_name TEXT,
+    genre TEXT,
+    famous_song TEXT,
+    origin_state TEXT,
+    Country TEXT,
+    label TEXT);
+    
+INSERT INTO singers (id, artist_name, genre, famous_song, origin_state, country, label)
+    VALUES (1, "Rihanna", "multiple", "Pon De Replay", "Bridgetown", "Caribbean", "Roc Nation");
+INSERT INTO singers(id, artist_name, genre, famous_song, origin_state, country, label)
+    VALUES (2, "Arianna Grande", "Pop", "One last time", "Boca Raton", "USA", "Republic records");
+INSERT INTO singers(id, artist_name, genre, famous_song, origin_state, country, label)
+    VALUES (3, "Sam Smith", "Pop", "Latch", "London", "United Kingdom", "Capitol records");
+    INSERT INTO singers(id, artist_name, genre, famous_song, origin_state, country, label)
+    VALUES (4, "Jhene Aiko", "R&B", "Triggered", "Los Angeles", "USA", "ARTium");
+INSERT INTO singers(id, artist_name, genre, famous_song, origin_state, country, label)
+    VALUES (5, "Drake", "Hip Hop", "One Dance", "Toronto", "Canada", "OVO Sound");
+INSERT INTO singers(id, artist_name, genre, famous_song, origin_state, country, label)
+    VALUES (6, "Chris Brown", "Hip Hop", "Run it", "Tappahannock", "USA", "RCA records");
+INSERT INTO singers(id, artist_name, genre, famous_song, origin_state, country, label)
+    VALUES (7, "SZA", "R&B", "Broken clocks", "St.Louis", "USA", "RCA records");
+INSERT INTO singers(id, artist_name, genre, famous_song, origin_state, country, label)
+    VALUES (8, "H.E.R", "R&B", "Could've been", "Vallejo", "USA", "RCA records");
+INSERT INTO singers(id, artist_name, genre, famous_song, origin_state, country, label)
+    VALUES (9, "The Weeknd", "R&B", "Blinding lights", "Toronto", "Canada", "XO records");
+INSERT INTO singers(id, artist_name, genre, famous_song, origin_state, country, label)
+    VALUES (10, "Ella Mai", "R&B", "Trip", "London", "United kingdom", "Interscopes records");
+
+
+CREATE TABLE best_albums 
+    (album_id INTEGER,
+    title TEXT,
+    release_year INTEGER,
+    us_billboard_rank INTEGER);
+
+INSERT INTO best_albums
+    (album_id, title, release_year, us_billboard_rank)
+    VALUES (1, "ANTI", 2016, 230);
+INSERT INTO best_albums
+    (album_id, title, release_year, us_billboard_rank)
+    VALUES (3, "The lonely hour", 2014, 169);
+INSERT INTO best_albums
+    (album_id, title, release_year, us_billboard_rank)
+    VALUES (4, "Chilombo", 2020, 2);
+INSERT INTO best_albums
+    (album_id, title, release_year, us_billboard_rank)
+    VALUES (5, "Take care", 2011, 1);
+INSERT INTO best_albums
+    (album_id, title, release_year, us_billboard_rank)
+    VALUES (6, "Exclusive", 2007, 4);
+INSERT INTO best_albums
+    (album_id, title, release_year, us_billboard_rank)
+    VALUES (7, "Ctrl", 2017, 3);
+INSERT INTO best_albums
+    (album_id, title, release_year, us_billboard_rank)
+    VALUES (8, "H.E.R", 2017, 23);
+INSERT INTO best_albums
+    (album_id, title, release_year, us_billboard_rank)
+    VALUES (9, "The house of balloons", 2011, 27);
+INSERT INTO best_albums
+    (album_id, title, release_year, us_billboard_rank)
+    VALUES (10, "Ella Mai", 2018, 5);
+
+
+CREATE TABLE album_sales 
+    (album_id INTEGER,
+    gross_sales INTEGER,
+    number_of_albums INTEGER);
+
+INSERT INTO album_sales
+    (album_id,
+    gross_sales,
+    number_of_albums)
+    VALUES (1, 38658538, 8);
+INSERT INTO album_sales
+    (album_id,
+    gross_sales,
+    number_of_albums)
+    VALUES (2, 90000000,6);
+INSERT INTO album_sales
+    (album_id,
+    gross_sales,
+    number_of_albums)
+    VALUES (3, 200000000,3);
+INSERT INTO album_sales
+    (album_id,
+    gross_sales,
+    number_of_albums)
+    VALUES (4, 2557000,3);
+INSERT INTO album_sales
+    (album_id,
+    gross_sales,
+    number_of_albums)
+    VALUES (5, 170000000,14);
+INSERT INTO album_sales
+    (album_id,
+    gross_sales,
+    number_of_albums)
+    VALUES (6, 197000000,10);
+INSERT INTO album_sales
+    (album_id,
+    gross_sales,
+    number_of_albums)
+    VALUES (7, 100000000,2);
+INSERT INTO album_sales
+    (album_id,
+    gross_sales,
+    number_of_albums)
+    VALUES (8, 1000000,3);
+ INSERT INTO album_sales
+    (album_id,
+    gross_sales,
+    number_of_albums)
+    VALUES (9, 125000000,1);
+INSERT INTO album_sales
+    (album_id,
+    gross_sales,
+    number_of_albums)
+    VALUES (10, 69000,6);
+    
+    
+SELECT id, artist_name, genre, famous_song, origin_state, country, label 
+   FROM singers
+   LEFT OUTER JOIN best_albums
+   ON id = album_id;
